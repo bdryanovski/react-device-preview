@@ -1,16 +1,40 @@
 # react-device-preview
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+React component to create CSS only preview of the device.
+The css is part of [device.css](http://marvelapp.github.io/devices.css/)
 
-Describe react-device-preview here.
+### Install
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+```bash
+$ npm i react-device-preview
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+### Usage
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+```js
+import React, { Component } from 'react'
+import ReactDevicePreview from 'react-device-preview'
+
+class Something extends Component {
+  render () {
+    return (
+      <div>
+        <h1> iPhoneX </h1>
+
+        <ReactDevicePreview
+          device="iphonex"
+          scale="0.6"
+          >
+          <h1> Hello World </h1>
+        </ReactDevicePreview>
+
+      </div>
+    )
+  }
+}
+```
+
+#### Credits
+
+Thanks again to the people of (Marvel)[https://marvelapp.com/] for the hard work. And this small 
+project will never be here without them. 

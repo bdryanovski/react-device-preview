@@ -18,6 +18,8 @@ const DeviceList = [
   'macbookpro'
 ]
 
+
+
 export default class extends Component {
 
   static defaultProps = {
@@ -25,6 +27,7 @@ export default class extends Component {
     controls: false,
     position: '', // landscape
     color: '',
+    scale: 1.0
   }
 
   constructor(props) {
@@ -36,13 +39,20 @@ export default class extends Component {
     }
   }
 
+  scaleView() {
+    return {
+      WebkitTransform: `scale(${ this.props.scale })`,
+      transform: `scale(${ this.props.scale })`
+    }
+  }
+
   wrp(n) {
-    return `marvel-device ${n} ${this.state.position} ${ this.state.color }`
+    return `marvel-device ${n} ${this.state.position} ${ this.state.color }`;
   }
 
   iphonex() {
     return (
-      <div className={ this.wrp('iphone-x') }>
+      <div className={ this.wrp('iphone-x') } style={ this.scaleView() }>
         <div className="notch">
           <div className="camera"></div>
           <div className="speaker"></div>
