@@ -18,13 +18,10 @@ const DeviceList = [
   'macbookpro'
 ]
 
-
-
 export default class extends Component {
 
   static defaultProps = {
     device: 'iphonex',
-    controls: false,
     position: '', // landscape
     color: '',
     scale: 1.0
@@ -222,38 +219,12 @@ export default class extends Component {
     )
   }
 
-  togglePosition = () => {
-    if (this.state.position === '') {
-      return this.setState({ position: 'landscape' });
-    }
-
-    if (this.state.position === 'landscape') {
-      return this.setState({ position: '' });
-    }
-  }
-
-  renderDevice(device) {
-    if (this.props.controls) {
-      return (
-        <div>
-          <div onClick={ this.togglePosition }>
-            { this.state.position === '' ? 'Portret' : 'Landscape'  }
-          </div>
-          { this[device]() }
-        </div>
-      )
-    }
-
-    return this[device]();
-  }
-
-
   render() {
     /* check device */
     const device = DeviceList.find(d => d === this.props.device);
 
     if (device) {
-      return this.renderDevice(device);
+      return this[device]();
     }
 
     return null;
