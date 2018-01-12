@@ -7,7 +7,16 @@ class Demo extends Component {
   render() {
     return <div>
       <h1>react-device-preview Demo</h1>
-      <Example/>
+      <Example
+        device="iphone8"
+        controls="true"
+        color="black"
+      >
+        <center>
+          <br />
+          <h1> Hello World </h1>
+        </center>
+      </Example>
     </div>
   }
 }
