@@ -18,8 +18,8 @@ class Demo extends Component {
       <h1>react-device-preview Demo</h1>
       <ReactDevicePreview
         device="iphonex"
-        controls="true"
         color="black"
+        scale="0.7"
       >
         <div style={ screen }>
           <center>
