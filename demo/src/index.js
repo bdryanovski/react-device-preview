@@ -8,7 +8,7 @@ class Demo extends Component {
     return <div>
       <h1>react-device-preview Demo</h1>
       <Example
-        device="iphone8"
+        device="iphone5c"
         controls="true"
         color="black"
       >

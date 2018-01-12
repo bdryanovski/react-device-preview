@@ -10,11 +10,11 @@ const DeviceList = [
   'iphone5s',
   'iphone5c',
   'ipadmini',
-  'iphone4s',
+  // 'iphone4s',
   'nexus5',
-  'lumia920',
+  // 'lumia920',
   'galaxys5',
-  'htcone',
+  // 'htcone',
   'macbookpro'
 ]
 
@@ -117,6 +117,97 @@ export default class extends Component {
         </div>
         <div className="home"></div>
         <div className="bottom-bar"></div>
+      </div>
+    )
+  }
+
+  iphone5c() {
+    return (
+      <div className={ this.wrp('iphone5c') }>
+        <div className="top-bar"></div>
+        <div className="sleep"></div>
+        <div className="volume"></div>
+        <div className="camera"></div>
+        <div className="sensor"></div>
+        <div className="speaker"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
+        <div className="home"></div>
+        <div className="bottom-bar"></div>
+      </div>
+    )
+  }
+
+  iphone5s() {
+    return (
+      <div className={ this.wrp("iphone5s") }>
+        <div className="top-bar"></div>
+        <div className="sleep"></div>
+        <div className="volume"></div>
+        <div className="camera"></div>
+        <div className="sensor"></div>
+        <div className="speaker"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
+        <div className="home"></div>
+        <div className="bottom-bar"></div>
+      </div>
+    )
+  }
+
+  ipadmini() {
+    return (
+      <div className={ this.wrp('ipad') }>
+        <div className="camera"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
+        <div className="home"></div>
+      </div>
+    )
+  }
+
+  macbookpro() {
+    return (
+      <div className={ this.wrp("macbook") }>
+        <div className="top-bar"></div>
+        <div className="camera"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
+        <div className="bottom-bar"></div>
+      </div>
+    )
+  }
+
+  galaxys5() {
+    return (
+      <div className={ this.wrp('s5') }>
+        <div className="top-bar"></div>
+        <div className="sleep"></div>
+        <div className="camera"></div>
+        <div className="sensor"></div>
+        <div className="speaker"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
+        <div className="home"></div>
+      </div>
+    )
+  }
+
+  nexus5() {
+    return (
+      <div className={ this.wrp('nexus5') }>
+        <div className="top-bar"></div>
+        <div className="sleep"></div>
+        <div className="volume"></div>
+        <div className="camera"></div>
+        <div className="screen">
+          { this.props.children }
+        </div>
       </div>
     )
   }
