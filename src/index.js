@@ -223,10 +223,10 @@ export default class extends Component {
     /* check device */
     const device = DeviceList.find(d => d === this.props.device);
 
-    if (device) {
-      return this[device]();
+    if (!device) {
+      return null;  
     }
-
-    return null;
+    return this[device]();
+    
   }
 }
